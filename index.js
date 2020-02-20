@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-// var page = express()
+// app.engine('html', require('ejs').renderFile);
 
 app.get('/', function (req, res) {
   res.send('hello dadsfdasorld')
@@ -13,9 +13,7 @@ app.get('/', function (req, res) {
 
 // 2. Make route for page.html
 app.get('/page', function (req, res) {
-  res.render('page', function (err, html) {
-    res.send(html)
-  })
+  res.render('/page.html')
 })
 
 // app.use('/page', page)
